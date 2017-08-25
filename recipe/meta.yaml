@@ -15,14 +15,15 @@ build:
   number: 0
 
 requirements:
-  host:
-    - gstreamer 1.12.*
 
   build:
+    - {{ compiler('c') }}
     - m4
     - perl
-    - xz 5.2.*
-    - {{ compiler('c') }}
+
+  host:
+    - gstreamer 1.12.*
+    - xz
 
   run:
     - gstreamer 1.12.*
