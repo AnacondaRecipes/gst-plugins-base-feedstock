@@ -1,5 +1,5 @@
-{% set version = "1.8.0" %}
-{% set sha256 = "abc0acc1d15b4b9c97c65cd9689bd6400081853b9980ea428d3c8572dd791522" %}
+{% set version = "1.12.2" %}
+{% set sha256 = "5067dce3afe197a9536fea0107c77213fab536dff4a213b07fc60378d5510675" %}
 
 package:
   name: gst-plugins-base
@@ -16,7 +16,7 @@ build:
 
 requirements:
   host:
-    - gstreamer 1.8.*
+    - gstreamer 1.12.*
 
   build:
     - m4
@@ -25,7 +25,7 @@ requirements:
     - {{ compiler('c') }}
 
   run:
-    - gstreamer 1.8.*
+    - gstreamer 1.12.*
 
 test:
   commands:
