@@ -13,20 +13,19 @@ source:
 build:
   skip: true  # [win or osx]
   number: 0
+  run_exports:
+    # remove symbols at .90 patch releases just before minor versions?
+    #    https://abi-laboratory.pro/tracker/timeline/gstreamer/
+    - {{ pin_subpackage('gst-plugins-base', max_pin='x.x') }}
 
 requirements:
-
   build:
     - {{ compiler('c') }}
     - m4
     - perl
-
   host:
-    - gstreamer 1.12.*
+    - gstreamer
     - xz
-
-  run:
-    - gstreamer 1.12.*
 
 test:
   commands:
