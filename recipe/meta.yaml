@@ -21,10 +21,17 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ cdt('libxau-devel') }}          # [linux]
+    - {{ cdt('libxext-devel') }}         # [linux]
+    - {{ cdt('libx11-devel') }}          # [linux]
+    - {{ cdt('libxrender-devel') }}      # [linux]
+    - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
     - m4
+    - libxcb                             # [linux]
     - perl
   host:
     - gstreamer
+    - libxcb
     - xz
 
 test:
